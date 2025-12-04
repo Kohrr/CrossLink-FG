@@ -9,7 +9,6 @@
 	</Configurations>
 	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="0f163f3b-687f-3530-ad24-e60119f3b3b0" DefaultStartup="true">
 		<BuildDependency Project="CrossLinkFG.vcxproj"/>
-		<BuildDependency Project="CrossLinkOverlay.vcxproj"/>
 		<BuildDependency Project="Simulator.vcxproj"/>
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<BuildDependency Project="imgui.vcxproj"/>
@@ -21,14 +20,13 @@
 	</Project>
 	<Project Path="CrossLinkFG.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2b07132d-cb16-3b30-b5f6-730e6125e70d">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
-		<BuildDependency Project="minhook.vcxproj"/>
-	</Project>
-	<Project Path="CrossLinkOverlay.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9ce667db-03fb-3a54-9950-b8cbe7b570a2">
-		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
 		<BuildDependency Project="imgui.vcxproj"/>
+		<BuildDependency Project="minhook.vcxproj"/>
 	</Project>
 	<Project Path="Simulator.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b2fba52a-4877-3dbf-8a3b-ed0acd49d277">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="imgui.vcxproj"/>
+		<BuildDependency Project="minhook.vcxproj"/>
 	</Project>
 	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="6e6a907a-3162-38a9-914e-6100f5bd712b"/>
 	<Project Path="imgui.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="285a22cb-df40-3113-b429-e037a0e176be">

@@ -7,16 +7,10 @@
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\proxy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\hooks_clean.cpp">
+    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\dx12_hooks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_capture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_processor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\opencl_amd_processor.cpp">
+    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\imgui_manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\FrameGenManager.cpp">

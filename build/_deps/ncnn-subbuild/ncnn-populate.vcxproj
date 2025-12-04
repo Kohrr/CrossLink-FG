@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1B8A2E3-23A5-3207-BC77-FB8E23D4E0E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ncnn-populate</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-mkdir.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/tmp/ncnn-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/tmp/ncnn-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\ncnn-populate-gitinfo.txt;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/tmp/ncnn-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\tmp\ncnn-populate-gitupdate.cmake;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\ncnn-populate-update-info.txt;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\ncnn-populate-patch-info.txt;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-configure.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\tmp\ncnn-populate-cfgcmd.txt;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-build.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-install.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-test.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\2599dc17237ff12e00b98feaf38e91b7\ncnn-populate-complete.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'ncnn-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/Debug/ncnn-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/ncnn-populate-prefix/src/ncnn-populate-stamp/Debug/ncnn-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-install;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-mkdir;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-download;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-update;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-patch;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-configure;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-build;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\src\ncnn-populate-stamp\Debug\ncnn-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\Debug\ncnn-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\c39fb9ef29fb3b472fa0b03162efa147\ncnn-populate.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\Debug\ncnn-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\ncnn-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild -BC:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild --check-stamp-file C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.2\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\4.2.0\CMakeSystem.cmake;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ncnn-populate-prefix\tmp\ncnn-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\ncnn-populate">
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{94909AE0-641C-3F3F-8B9B-45150CD7B4E8}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

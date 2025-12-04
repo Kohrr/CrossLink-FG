@@ -236,6 +236,10 @@ FETCHCONTENT_SOURCE_DIR_IMGUI:PATH=
 // for minhook
 FETCHCONTENT_SOURCE_DIR_MINHOOK:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for ncnn
+FETCHCONTENT_SOURCE_DIR_NCNN:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
@@ -244,6 +248,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED_IMGUI:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of minhook
 FETCHCONTENT_UPDATES_DISCONNECTED_MINHOOK:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of ncnn
+FETCHCONTENT_UPDATES_DISCONNECTED_NCNN:BOOL=OFF
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe

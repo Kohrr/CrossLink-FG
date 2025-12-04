@@ -3,23 +3,93 @@
 #include <iostream>
 #include <fstream>
 #include <thread>
-#include "frame_processor.h"
+#include <chrono>
 
-// Forward declarations
-bool InitializeHooks();
-void ShutdownHooks();
-DWORD WINAPI MainThread(LPVOID lpParam);
+// Forward declarations für Hook-Funktionen
+bool InstallDX12Hooks();
+void UninstallDX12Hooks();
 
+// CRITICAL: MainThread Funktion
+DWORD WINAPI MainThread(LPVOID lpParam) {
+    HMODULE hModule = (HMODULE)lpParam;
+
+    // STEP 1: Console erstellen
+    AllocConsole();
+    FILE* fp_stdout;
+    freopen_s(&fp_stdout, "CONOUT$", "w", stdout);
+
+    // STEP 2: Willkommensnachricht
+    std::cout << "=======================================" << std::endl;
+    std::cout << "CrossLink FG - God-Tier Main Thread!" << std::endl;
+    std::cout << "=======================================" << std::endl;
+    std::cout << "DLL erfolgreich in Zielprozess geladen." << std::endl;
+    std::cout << "Console angehängt und Output umgeleitet." << std::endl;
+    std::cout << std::endl;
+
+    // STEP 3: GOD-TIER - Warte 8 Sekunden für Spielstart (langsamere Systems / Overlays)
+    std::cout << "[GOD-TIER] Warte 8 Sekunden für kompletten Spielstart..." << std::endl;
+    for (int i = 8; i > 0; i--) {
+        std::cout << "[GOD-TIER] Countdown: " << i << " Sekunden..." << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    std::cout << "[GOD-TIER] Spielstartzeit abgelaufen. Initialisiere Hooks..." << std::endl;
+    std::cout << std::endl;
+
+    // STEP 4: Hooks installieren
+    if (InstallDX12Hooks()) {
+        std::cout << "===========================================" << std::endl;
+        std::cout << "[GOD-TIER SUCCESS] 🎯 ALLE HOOKS INSTALLIERT!" << std::endl;
+        std::cout << "[GOD-TIER SUCCESS] ExecuteCommandLists Hook: AKTIV" << std::endl;
+        std::cout << "[GOD-TIER SUCCESS] Present Hook: AKTIV" << std::endl;
+        std::cout << "[GOD-TIER SUCCESS] 🎮 OVERLAY WIRD SICHTBAR SEIN!" << std::endl;
+        std::cout << "===========================================" << std::endl;
+
+        // Erfolgs-Log schreiben
+        std::ofstream successlog("CrossLink_GodTier_Success.txt");
+        successlog << "GOD-TIER HOOKS ERFOLGREICH INSTALLIERT!" << std::endl;
+        successlog << "Zeit: " << __TIME__ << std::endl;
+        successlog << "Datum: " << __DATE__ << std::endl;
+        successlog << "Overlay wird in Borderlands 3 sichtbar sein!" << std::endl;
+        successlog.close();
+
+        std::cout << std::endl;
+        std::cout << "🎮 BITTE JETZT BORDERLANDS 3 STARTEN!" << std::endl;
+        std::cout << "🎮 Das Overlay wird automatisch erscheinen!" << std::endl;
+        std::cout << std::endl;
+
+        // Hauptthread am Leben halten
+        while (true) {
+            std::this_thread::sleep_for(std::chrono::seconds(10));
+            std::cout << "[GOD-TIER] Hooks aktiv - CrossLink FG läuft..." << std::endl;
+        }
+    } else {
+        std::cout << "===========================================" << std::endl;
+        std::cout << "[GOD-TIER FAILURE] ❌ Hook-Installation fehlgeschlagen!" << std::endl;
+        std::cout << "[GOD-TIER FAILURE] CrossLink FG ist nicht aktiv." << std::endl;
+        std::cout << "===========================================" << std::endl;
+
+        // Fehler-Log schreiben
+        std::ofstream faillog("CrossLink_GodTier_Failure.txt");
+        faillog << "GOD-TIER HOOK-INSTALLATION FEHLGESCHLAGEN!" << std::endl;
+        faillog << "Zeit: " << __TIME__ << std::endl;
+        faillog << "Datum: " << __DATE__ << std::endl;
+        faillog.close();
+    }
+
+    return 0;
+}
+
+// DLL Entry Point
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
     switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
-        // MINIMAL: Just create thread and beep to confirm loading
+        // Kritisch: Thread-Aufrufe deaktivieren für Performance
         DisableThreadLibraryCalls(hModule);
 
-        // AUDIBLE CONFIRMATION: Beep on successful load
+        // Audio-Bestätigung: Beep bei erfolgreichem Laden
         MessageBeep(MB_OK);
 
-        // Start main thread - our actual logic runs there
+        // Hauptthread starten - unsere Logik läuft dort
         CreateThread(nullptr, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, nullptr);
         break;
 
@@ -33,66 +103,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     return TRUE;
 }
 
-// MAIN THREAD - RUNS AFTER DLLMAIN RETURNS (thread-safe)
-DWORD WINAPI MainThread(LPVOID lpParam) {
-    HMODULE hModule = (HMODULE)lpParam;
+// Kompatibilitätsfunktionen für andere Module
+bool InitializeHooks() {
+    return InstallDX12Hooks();
+}
 
-    // STEP 1: Allocate console window
-    AllocConsole();
-
-    // STEP 2: Redirect stdout to console
-    FILE* fp_stdout;
-    freopen_s(&fp_stdout, "CONOUT$", "w", stdout);
-
-    // STEP 3: Welcome message
-    std::cout << "=======================================" << std::endl;
-    std::cout << "CrossLink FG - Main Thread Started!" << std::endl;
-    std::cout << "=======================================" << std::endl;
-    std::cout << "DLL successfully injected into target process." << std::endl;
-    std::cout << "Console attached and output redirected." << std::endl;
-    std::cout << std::endl;
-
-    // STEP 4: WAIT for game startup to complete (critical!)
-    std::cout << "Waiting 3 seconds for game startup to complete..." << std::endl;
-    Sleep(3000);  // 3 seconds
-    std::cout << "Game startup time elapsed. Initializing hooks..." << std::endl;
-    std::cout << std::endl;
-
-    // STEP 5: Start Frame Processor for async frame processing
-    FrameProcessor::Start();
-    std::cout << "[FRAME PROCESSOR] Started for Cross-GPU frame generation." << std::endl;
-
-    // STEP 6: NOW it's safe to initialize hooks (game is running)
-    if (InitializeHooks()) {
-        std::cout << "=======================================" << std::endl;
-        std::cout << "[SUCCESS] CrossLink FG hooks initialized!" << std::endl;
-        std::cout << "[SUCCESS] Frame generation active in game." << std::endl;
-        std::cout << "[SUCCESS] You should see the overlay now." << std::endl;
-        std::cout << "=======================================" << std::endl;
-
-        // Update debug file with success
-        std::ofstream successlog("CrossLink_Success.txt");
-        successlog << "HOOKS INITIALIZED SUCCESSFULLY!" << std::endl;
-        successlog << "Time: " << __TIME__ << std::endl;
-        successlog << "Date: " << __DATE__ << std::endl;
-        successlog.close();
-
-        // Keep thread alive
-        while (true) {
-            Sleep(1000);  // Sleep forever - keeps hooks alive
-        }
-    } else {
-        std::cout << "=======================================" << std::endl;
-        std::cout << "[FAILURE] Failed to initialize hooks!" << std::endl;
-        std::cout << "[FAILURE] CrossLink FG not active." << std::endl;
-        std::cout << "=======================================" << std::endl;
-
-        // Update debug file with failure
-        std::ofstream faillog("CrossLink_Failure.txt");
-        faillog << "HOOK INITIALIZATION FAILED!" << std::endl;
-        faillog << "Time: " << __TIME__ << std::endl;
-        faillog.close();
-    }
-
-    return 0;
+void ShutdownHooks() {
+    UninstallDX12Hooks();
 }

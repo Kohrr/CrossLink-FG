@@ -178,10 +178,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{2B07132D-CB16-3B30-B5F6-730E6125E70D}</Project>
       <Name>CrossLinkFG</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkOverlay.vcxproj">
-      <Project>{9CE667DB-03FB-3A54-9950-B8CBE7B570A2}</Project>
-      <Name>CrossLinkOverlay</Name>
-    </ProjectReference>
     <ProjectReference Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\Simulator.vcxproj">
       <Project>{B2FBA52A-4877-3DBF-8A3B-ED0ACD49D277}</Project>
       <Name>Simulator</Name>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\9731b4f1a3b703bdebc76d632756cf9d\ncnn-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\2599dc17237ff12e00b98feaf38e91b7\ncnn-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\c39fb9ef29fb3b472fa0b03162efa147\ncnn-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\ncnn-subbuild\CMakeFiles\ncnn-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5572981D-2A37-3F13-ADDD-985731ACFD40}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

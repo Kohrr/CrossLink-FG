@@ -2,6 +2,7 @@
 // This DLL acts as a "Trojan Horse" - the game loads it as "version.dll"
 // but it also injects our CrossLink FG functionality
 
+// Complete version.dll API forwarding - CRITICAL für Borderlands 3
 #pragma comment(linker,"/export:GetFileVersionInfoA=C:\\Windows\\System32\\version.dll.GetFileVersionInfoA")
 #pragma comment(linker,"/export:GetFileVersionInfoByHandle=C:\\Windows\\System32\\version.dll.GetFileVersionInfoByHandle")
 #pragma comment(linker,"/export:GetFileVersionInfoExA=C:\\Windows\\System32\\version.dll.GetFileVersionInfoExA")
@@ -19,6 +20,10 @@
 #pragma comment(linker,"/export:VerLanguageNameW=C:\\Windows\\System32\\version.dll.VerLanguageNameW")
 #pragma comment(linker,"/export:VerQueryValueA=C:\\Windows\\System32\\version.dll.VerQueryValueA")
 #pragma comment(linker,"/export:VerQueryValueW=C:\\Windows\\System32\\version.dll.VerQueryValueW")
+
+// Additional exports for Windows 10/11 compatibility
+#pragma comment(linker,"/export:GetFileVersionInfoSizeExW_Override=C:\\Windows\\System32\\version.dll.GetFileVersionInfoSizeExW")
+#pragma comment(linker,"/export:VerQueryValueW_Override=C:\\Windows\\System32\\version.dll.VerQueryValueW")
 
 // Note: This file only provides the forwarding exports.
 // The actual logic is handled in dllmain.cpp in the MainThread function.

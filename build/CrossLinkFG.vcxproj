@@ -107,12 +107,12 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR="Debug";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern "C";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR="Debug";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern \"C\";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR=\"Debug\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\wirtz\Desktop\CrossLink-FG\include;C:\Users\wirtz\Desktop\CrossLink-FG\stubs;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src\backends;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -124,7 +124,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Debug\minhook.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Debug\imgui.lib;Debug\minhook.lib;d3d12.lib;dxgi.lib;d3d11.lib;user32.lib;gdi32.lib;kernel32.lib;advapi32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -162,14 +162,14 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR="Release";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern "C";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR="Release";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern \"C\";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR=\"Release\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\wirtz\Desktop\CrossLink-FG\include;C:\Users\wirtz\Desktop\CrossLink-FG\stubs;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src\backends;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -181,7 +181,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Release\minhook.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Release\imgui.lib;Release\minhook.lib;d3d12.lib;dxgi.lib;d3d11.lib;user32.lib;gdi32.lib;kernel32.lib;advapi32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -219,14 +219,14 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR="MinSizeRel";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern "C";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR="MinSizeRel";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR=\"MinSizeRel\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern \"C\";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR=\"MinSizeRel\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\wirtz\Desktop\CrossLink-FG\include;C:\Users\wirtz\Desktop\CrossLink-FG\stubs;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src\backends;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -238,7 +238,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>MinSizeRel\minhook.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>MinSizeRel\imgui.lib;MinSizeRel\minhook.lib;d3d12.lib;dxgi.lib;d3d11.lib;user32.lib;gdi32.lib;kernel32.lib;advapi32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -277,12 +277,12 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR="RelWithDebInfo";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern "C";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR="RelWithDebInfo";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;CMAKE_INTDIR=\"RelWithDebInfo\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CROSSLINKFG_DLL_EXPORT;NOMINMAX;WIN32_LEAN_AND_MEAN;UNICODE;_UNICODE;IMGUI_IMPL_API=extern \"C\";IMGUI_IMPL_DX12_ENABLED;IMGUI_IMPL_WIN32_ENABLED;CMAKE_INTDIR=\"RelWithDebInfo\";CrossLinkFG_EXPORTS</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\wirtz\Desktop\CrossLink-FG\include;C:\Users\wirtz\Desktop\CrossLink-FG\stubs;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-src\backends;C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -294,7 +294,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>RelWithDebInfo\minhook.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>RelWithDebInfo\imgui.lib;RelWithDebInfo\minhook.lib;d3d12.lib;dxgi.lib;d3d11.lib;user32.lib;gdi32.lib;kernel32.lib;advapi32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <DataExecutionPrevention></DataExecutionPrevention>
@@ -371,10 +371,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\dllmain.cpp" />
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\proxy.cpp" />
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\hooks_clean.cpp" />
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_capture.cpp" />
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_processor.cpp" />
-    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\opencl_amd_processor.cpp" />
+    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\dx12_hooks.cpp" />
+    <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\imgui_manager.cpp" />
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\FrameGenManager.cpp" />
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\DX12Renderer.cpp" />
     <ClCompile Include="C:\Users\wirtz\Desktop\CrossLink-FG\src\OpenCLProcessor.cpp" />
@@ -388,6 +386,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\imgui.vcxproj">
+      <Project>{285A22CB-DF40-3113-B429-E037A0E176BE}</Project>
+      <Name>imgui</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.vcxproj">
       <Project>{F7995088-D98D-3338-9E81-85FA3C877C45}</Project>

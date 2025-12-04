@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/ncnn-populate"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/c39fb9ef29fb3b472fa0b03162efa147/ncnn-populate.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/2599dc17237ff12e00b98feaf38e91b7/ncnn-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/ncnn-subbuild/CMakeFiles/9731b4f1a3b703bdebc76d632756cf9d/ncnn-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ncnn-populate"
+		],
+		"name" : "ncnn-populate"
+	}
+}
