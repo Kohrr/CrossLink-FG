@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" 
+           Name="CrossLink-FG (Frame Generation Middleware)" 
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="CrossLink-FG Team" 
+           UpgradeCode="{12345678-1234-5678-9012-123456789ABC}">
+    
+    <Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Description="CrossLink-FG: Professional Cross-GPU Frame Generation Middleware"
+             Comments="Advanced Frame Generation Solution for Borderlands 3/4 with ImGui Overlay"
+             Manufacturer="CrossLink-FG Team" 
+             InstallPrivileges="elevated" />
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+                  Schedule="afterInstallInitialize"
+                  AllowSameVersionUpgrades="yes" />
+    
+    <MediaTemplate EmbedCab="yes" Id="1" DiskPrompt="CrossLink-FG Installation CD #1" />
+    
+    <!-- Include features -->
+    <Feature Id="ProductFeature" Title="CrossLink-FG" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      
+      <!-- Feature for development tools -->
+      <Feature Id="DevelopmentFeature" 
+               Title="Development Tools" 
+               Level="1000"
+               Description="Development tools and debugging utilities">
+        <ComponentRef Id="DevTools" />
+        <ComponentRef Id="DebugSymbols" />
+        <ComponentRef Id="SourceHeaders" />
+      </Feature>
+      
+      <!-- Feature for source code -->
+      <Feature Id="SourceFeature" 
+               Title="Source Code" 
+               Level="1001"
+               Description="Full source code for developers and researchers">
+        <ComponentRef Id="SourceCode" />
+        <ComponentRef Id="CMakeFiles" />
+        <ComponentRef Id="BuildScripts" />
+      </Feature>
+    </Feature>
+
+    <!-- Installation UI -->
+    <UIRef Id="WixUI_FeatureTree" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    
+    <!-- Properties -->
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <Property Id="ARPPRODUCTICON" Value="CrossLinkFGIcon.exe" />
+    <Property Id="ARPHELPLINK" Value="https://crosslink-fg.github.io/docs" />
+    <Property Id="ARPURLINFOABOUT" Value="https://crosslink-fg.github.io" />
+    
+    <!-- License -->
+    <WixVariable Id="WixUILicenseRtf" Value="installer\EULA.rtf" />
+    
+    <!-- Branding -->
+    <WixVariable Id="WixUIBannerBmp" Value="installer\banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="installer\dialog.bmp" />
+    
+    <!-- Product icon -->
+    <Icon Id="CrossLinkFGIcon.exe" SourceFile="build/CrossLink-FG.exe" />
+    
+  </Product>
+</Wix>

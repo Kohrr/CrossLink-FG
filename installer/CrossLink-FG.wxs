@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" 
+           Name="CrossLink-FG (Frame Generation Middleware)" 
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="CrossLink-FG Team" 
+           UpgradeCode="{12345678-1234-5678-9012-123456789ABC}">
+    
+    <Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Description="CrossLink-FG: Professional Cross-GPU Frame Generation Middleware"
+             Comments="Advanced Frame Generation Solution for Borderlands 3/4 with ImGui Overlay"
+             Manufacturer="CrossLink-FG Team" />
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    
+    <MediaTemplate EmbedCab="yes" />
+    
+    <!-- Define the directory structure -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="CrossLink-FG">
+          <Directory Id="BIN" Name="bin" />
+          <Directory Id="LIB" Name="lib" />
+          <Directory Id="DOCS" Name="docs" />
+          <Directory Id="GAMES" Name="games" />
+          <Directory Id="KERNELS" Name="kernels" />
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <!-- Define components -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      
+      <!-- Main DLL and executable files -->
+      <Component Id="MainExecutable" Guid="*">
+        <File Id="CrossLinkFGExe" 
+              Source="build/Debug/CrossLink-FG.exe" 
+              KeyPath="yes" />
+        <util:PermissionEx xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+                           Users="[LogonUser]" 
+                           GenericAll="yes" />
+      </Component>
+      
+      <!-- Core DLL files -->
+      <Component Id="CoreDLLs" Guid="*">
+        <File Source="build/Debug/CrossLink-FG.dll" />
+        <File Source="build/Debug/version.dll" />
+        <File Source="build/Debug/imgui.dll" />
+        <File Source="build/Debug/minhook.dll" />
+      </Component>
+      
+      <!-- Game-specific files -->
+      <Component Id="GameFiles" Guid="*">
+        <File Source="games/Borderlands3/version.dll" />
+        <File Source="games/Borderlands4/version.dll" />
+        <CreateFolder />
+      </Component>
+      
+      <!-- OpenCL kernels -->
+      <Component Id="OpenCLKernels" Guid="*">
+        <File Source="kernels/frame_interpolation.cl" />
+        <File Source="kernels/motion_compensation.cl" />
+        <File Source="kernels/temporal_filtering.cl" />
+      </Component>
+      
+      <!-- Documentation -->
+      <Component Id="Documentation" Guid="*">
+        <File Source="docs/README.md" />
+        <File Source="docs/INSTALLATION.md" />
+        <File Source="docs/USER_GUIDE.md" />
+        <File Source="docs/DEVELOPER_GUIDE.md" />
+        <File Source="docs/TROUBLESHOOTING.md" />
+        <File Source="docs/API_REFERENCE.md" />
+      </Component>
+      
+      <!-- Configuration files -->
+      <Component Id="ConfigFiles" Guid="*">
+        <File Source="config/CrossLink-FG.ini" />
+        <File Source="config/overlay_settings.json" />
+        <File Source="config/gpu_profiles.json" />
+      </Component>
+      
+      <!-- Scripts and tools -->
+      <Component Id="ScriptsAndTools" Guid="*">
+        <File Source="scripts/install.bat" />
+        <File Source="scripts/uninstall.bat" />
+        <File Source="scripts/repair.bat" />
+        <File Source="tools/dx12_viewer.exe" />
+      </Component>
+    </ComponentGroup>
+
+    <!-- Install the components -->
+    <Feature Id="ProductFeature" Title="CrossLink-FG" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      
+      <!-- Feature for development tools -->
+      <Feature Id="DevelopmentFeature" 
+               Title="Development Tools" 
+               Level="1000"
+               Description="Development tools and debugging utilities">
+        <ComponentRef Id="DevTools" />
+      </Feature>
+      
+      <!-- Feature for source code -->
+      <Feature Id="SourceFeature" 
+               Title="Source Code" 
+               Level="1001"
+               Description="Full source code for developers">
+        <ComponentRef Id="SourceCode" />
+      </Feature>
+    </Feature>
+
+    <!-- Custom actions -->
+    <CustomAction Id="SetInstallDir" 
+                  Property="INSTALLFOLDER" 
+                  Value="[ProgramFilesFolder]CrossLink-FG" />
+    
+    <CustomAction Id="InstallGameFiles" 
+                  BinaryKey="InstallGameFilesCA" 
+                  DllEntry="InstallGameFiles" 
+                  Execute="deferred" 
+                  Impersonate="no" />
+    
+    <CustomAction Id="RegisterComponents" 
+                  BinaryKey="RegisterComponentsCA" 
+                  DllEntry="RegisterComponents" 
+                  Execute="deferred" 
+                  Impersonate="no" />
+
+    <!-- Install sequence -->
+    <InstallExecuteSequence>
+      <Custom Action="SetInstallDir" Before="CostFinalize" />
+      <Custom Action="InstallGameFiles" After="InstallFiles" />
+      <Custom Action="RegisterComponents" After="InstallGameFiles" />
+    </InstallExecuteSequence>
+
+    <!-- UI -->
+    <UIRef Id="WixUI_FeatureTree" />
+    
+    <!-- Properties -->
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    
+    <!-- License -->
+    <WixVariable Id="WixUILicenseRtf" Value="installer\EULA.rtf" />
+    
+    <!-- Branding -->
+    <WixVariable Id="WixUIBannerBmp" Value="installer\banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="installer\dialog.bmp" />
+    
+  </Product>
+</Wix>
