@@ -61,12 +61,18 @@ target_compile_definitions(imgui PRIVATE
     IMGUI_IMPL_API=extern\ "C"
 )
 
-# Source files - PROXY MODE: Build version.dll as a proxy/wrapper (EXCLUDE IMGUI FOR NOW)
+# Include directories
+include_directories(include)
+include_directories(stubs)
+include_directories(${imgui_SOURCE_DIR})
+include_directories(${imgui_SOURCE_DIR}/backends)
+
+# --- FIX: Source files - USE FULL DX12_HOOKS with ImGui integration ---
 set(SOURCES
     src/dllmain.cpp
     src/proxy.cpp
-    src/hooks_clean.cpp  # CLEAN HOOKS WITHOUT IMGUI DEPENDENCY
-    # REMOVED: src/imgui_manager.cpp - causes compilation issues
+    src/dx12_hooks.cpp           # FULL ImGui overlay with ExecuteCommandLists hook
+    src/imgui_manager.cpp        # ImGui overlay manager
     src/frame_capture.cpp
     src/frame_processor.cpp
     src/opencl_amd_processor.cpp
@@ -77,33 +83,20 @@ set(SOURCES
     src/NvidiaOpticalFlow.cpp
 )
 
-# Include directories
-include_directories(include)
-include_directories(stubs)
-include_directories(${imgui_SOURCE_DIR})
-include_directories(${imgui_SOURCE_DIR}/backends)
-
-# Add shared library (DLL) - PROXY MODE: Build as version.dll
+# Add shared library (DLL) - Build as version.dll
 add_library(CrossLinkFG SHARED ${SOURCES})
 set_target_properties(CrossLinkFG PROPERTIES OUTPUT_NAME "version")
 
-# Add Simple Overlay DLL - BASIC WINDOW WITH INFO DISPLAY
-set(OVERLAY_SOURCES
-    src/simple_overlay.cpp
-)
-
-add_library(CrossLinkOverlay SHARED ${OVERLAY_SOURCES})
-set_target_properties(CrossLinkOverlay PROPERTIES OUTPUT_NAME "overlay")
-target_compile_definitions(CrossLinkOverlay PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN UNICODE _UNICODE)
-
-# Link overlay DLL properly
-target_link_libraries(CrossLinkOverlay
-    imgui
+# --- FIX: Link ImGui STATISCH zu CrossLinkFG ---
+target_link_libraries(CrossLinkFG
+    imgui                      # STATIC linking
+    minhook
+    d3d12.lib
     dxgi.lib
+    d3d11.lib
+    user32.lib
+    gdi32.lib
 )
-
-# Add executable for testing (optional)
-add_executable(Simulator src/main.cpp src/Simulator.cpp src/DX12Renderer.cpp src/OpenCLProcessor.cpp src/SharedMemoryBridge.cpp src/NvidiaOpticalFlow.cpp)
 
 # Compiler definitions for DLL
 target_compile_definitions(CrossLinkFG PRIVATE
@@ -112,34 +105,31 @@ target_compile_definitions(CrossLinkFG PRIVATE
     WIN32_LEAN_AND_MEAN
     UNICODE
     _UNICODE
+    IMGUI_IMPL_API=extern\ "C"
+    IMGUI_IMPL_DX12_ENABLED
+    IMGUI_IMPL_WIN32_ENABLED
 )
 
-# Compiler definitions for exe
-target_compile_definitions(Simulator PRIVATE
-    NOMINMAX
-    WIN32_LEAN_AND_MEAN
-    UNICODE
-    _UNICODE
-)
+# Add executable for testing (optional)
+add_executable(Simulator src/main.cpp src/Simulator.cpp src/DX12Renderer.cpp src/OpenCLProcessor.cpp src/SharedMemoryBridge.cpp src/NvidiaOpticalFlow.cpp)
 
-# Include dirs for both
-target_link_libraries(CrossLinkFG
+target_link_libraries(Simulator
+    imgui
     minhook
-)
-
-target_include_directories(CrossLinkFG PRIVATE
-    $<BUILD_INTERFACE:${minhook_SOURCE_DIR}/include/>
-    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/>
-    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/backends/>
-)
-
-target_include_directories(CrossLinkOverlay PRIVATE
-    $<BUILD_INTERFACE:${minhook_SOURCE_DIR}/include/>
-    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/>
-    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/backends/>
+    d3d12.lib
+    dxgi.lib
+    d3d11.lib
+    user32.lib
+    gdi32.lib
 )
 
 target_include_directories(Simulator PRIVATE
+    $<BUILD_INTERFACE:${minhook_SOURCE_DIR}/include/>
+    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/>
+    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/backends/>
+)
+
+target_include_directories(CrossLinkFG PRIVATE
     $<BUILD_INTERFACE:${minhook_SOURCE_DIR}/include/>
     $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/>
     $<BUILD_INTERFACE:${imgui_SOURCE_DIR}/backends/>
