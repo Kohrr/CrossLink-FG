@@ -1,0 +1,10 @@
+^C:\USERS\WIRTZ\DESKTOP\CROSSLINK-FG\BUILD\CMAKEFILES\BBBAB58F369812430D6F4A2294E81918\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/wirtz/Desktop/CrossLink-FG -BC:/Users/wirtz/Desktop/CrossLink-FG/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/wirtz/Desktop/CrossLink-FG/build/CrossLinkFG.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

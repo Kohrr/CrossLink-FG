@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/minhook-populate"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/077508c2794aaaed4d6e795f19d405bf/minhook-populate.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/cb97a24e433e24b0da96f1de167e6d94/minhook-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/minhook-subbuild/CMakeFiles/fdddca6892b30c2843f8cb6629cfaab2/minhook-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"minhook-populate"
+		],
+		"name" : "minhook-populate"
+	}
+}

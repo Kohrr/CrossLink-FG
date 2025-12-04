@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\7f179d3247c1d72163962982653eb271\imgui-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\ec6cb69eae080f934ce87788084f9cd7\imgui-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\76d45e82305e72f8e636af751eca8c49\imgui-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\imgui-subbuild\CMakeFiles\imgui-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A3997E8B-4981-31E3-A7FD-D35195BF5E88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

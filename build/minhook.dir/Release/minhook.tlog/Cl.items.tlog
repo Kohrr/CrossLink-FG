@@ -1,0 +1,5 @@
+C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\src\buffer.c;C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.dir\Release\buffer.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\src\hook.c;C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.dir\Release\hook.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\src\trampoline.c;C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.dir\Release\trampoline.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\src\HDE\hde32.c;C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.dir\Release\hde32.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\build\_deps\minhook-src\src\HDE\hde64.c;C:\Users\wirtz\Desktop\CrossLink-FG\build\minhook.dir\Release\hde64.obj

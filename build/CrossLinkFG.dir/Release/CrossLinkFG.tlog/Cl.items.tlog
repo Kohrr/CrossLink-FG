@@ -1,0 +1,10 @@
+C:\Users\wirtz\Desktop\CrossLink-FG\src\dllmain.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\dllmain.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\proxy.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\proxy.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\hooks_clean.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\hooks_clean.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_capture.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\frame_capture.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\frame_processor.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\frame_processor.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\FrameGenManager.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\FrameGenManager.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\DX12Renderer.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\DX12Renderer.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\OpenCLProcessor.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\OpenCLProcessor.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\SharedMemoryBridge.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\SharedMemoryBridge.obj
+C:\Users\wirtz\Desktop\CrossLink-FG\src\NvidiaOpticalFlow.cpp;C:\Users\wirtz\Desktop\CrossLink-FG\build\CrossLinkFG.dir\Release\NvidiaOpticalFlow.obj

@@ -1,0 +1,3 @@
+C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate.dir
+C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/ZERO_CHECK.dir

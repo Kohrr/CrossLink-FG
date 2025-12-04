@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/76d45e82305e72f8e636af751eca8c49/imgui-populate.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/ec6cb69eae080f934ce87788084f9cd7/imgui-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/wirtz/Desktop/CrossLink-FG/build/_deps/imgui-subbuild/CMakeFiles/7f179d3247c1d72163962982653eb271/imgui-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"imgui-populate"
+		],
+		"name" : "imgui-populate"
+	}
+}
